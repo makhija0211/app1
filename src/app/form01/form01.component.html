@@ -1,6 +1,6 @@
 <div>
 
-  <form (submit)="loginUser($event)" (ngSubmit)="onSubmit()" #form01 [ngFormOptions]="{updateOn: 'change'}">
+  <form (submit)="loginUser($event)" (ngSubmit)="onSubmit($event)" #form01 [ngFormOptions]="{updateOn: 'change'}">
     <div class="form-group">
       <label for="firstname">What's your first name ?</label>
       <input type="text" class="form-control" id="firstname" required [(ngModel)]= "model.firstname" name="firstname" #firstname="ngModel" >

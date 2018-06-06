@@ -14,6 +14,10 @@ export class Form01Component implements OnInit {
 
   ngOnInit() {
   }
+  onSubmit(e:Event){
+    e.preventDefault();
+    console.log(e);
+  }
   loginUser(model)
   {
     model.preventDefault();
