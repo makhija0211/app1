@@ -1,27 +1,34 @@
 <div>
-    <h2> Expense list manager </h2>
+    <h4> Expense list </h4>
     <div class="col-md-4">&nbsp;</div>
     <div class="col-md-6">
         
             <div class="input-group"></div>
                 <input type="text" class="form-control" placeholder="Enter Expense name  " [(ngModel)]="task.name" />
+                <div>&nbsp;</div>
                 <input type="text" class="form-control" placeholder="Enter price " [(ngModel)]="task.price" />
-                <div class="input-group-btn">
+                <div>&nbsp;</div>
+                <input type="file" (change)="onFileSelected($event)">
+                <div>&nbsp;</div>
+                <button type="btn btn-submit" (click)="onUpload">Upload</button>    
+                <div>&nbsp;</div>
+                <!--<div class="input-group-btn">-->
                     <button class="btn btn-primary" type="button" (click)="onClick()">
-                        <span class="glyphicon glyphicon-ok"></span>
-                    </button>
-                </div>
+                        <span class="glyphicon glyphicon-ok">&nbsp;</span>
+                </button>
+                <!--</div>-->
         
                   
         <ul class="list-group">
                 <li *ngFor="let task of tasks" class="list-group-item">
                     <span (click)="onStrike(task)" [ngClass]="{'strike': task.strike}"> {{ task.name }} </span>
                     <span (click)="onStrike(task)" [ngClass]="{'strike': task.strike}"> {{ task.price }} </span>
-                    <span (click)="onEdit(task)" class="glyphicon glyphicon-pencil floatright"></span>
-                    <span (click)="onDelete(task)" class="glyphicon glyphicon-remove floatright paddingLeft"></span>
+                    <span (click)="onEdit(task)" class="glyphicon glyphicon-pencil floatright">&nbsp;</span>
+                    <span (click)="onDelete(task)" class="glyphicon glyphicon-remove floatright paddingLeft">&nbsp;</span>
                     
                 </li>
-        </ul>
+        </ul>        
+        
     </div>
     
 </div>
