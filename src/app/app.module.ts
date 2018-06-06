@@ -13,7 +13,7 @@ import { environment } from './../environments/environment';
 import { HeaderComponent } from './header/header.component';
 const appRoutes: Routes = [
   { path: 'home', component: Form01Component },
-  { path: 'profiles',component: ExpensepageComponent },
+  { path: 'expenses',component: GroceryComponent },
 ];
 @NgModule({
   declarations: [

@@ -1,6 +1,6 @@
 <div>
 
-  <form (ngSubmit)="onSubmit()" #form01 [ngFormOptions]="{updateOn: 'change'}">
+  <form (submit)="loginUser($event)" (ngSubmit)="onSubmit()" #form01 [ngFormOptions]="{updateOn: 'change'}">
     <div class="form-group">
       <label for="firstname">What's your first name ?</label>
       <input type="text" class="form-control" id="firstname" required [(ngModel)]= "model.firstname" name="firstname" #firstname="ngModel" >
@@ -21,7 +21,7 @@
   </form>
   <div>
     <div *ngIf="model.firstname && model.lastname"></div>
-    <h3>Hello {{model.firstname}}  {{model.lastname}}</h3>
+    <h3> Logged in as {{model.firstname}}  {{model.lastname}}</h3>
   </div>
 </div>
  

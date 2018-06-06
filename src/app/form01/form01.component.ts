@@ -14,5 +14,12 @@ export class Form01Component implements OnInit {
 
   ngOnInit() {
   }
-
+  loginUser(model)
+  {
+    model.preventDefault();
+    console.log(model);
+    var firstname=model.target.elements[0].value;
+    var lastname= model.target.elements[1].value;
+    console.log(firstname,lastname);
+  }
 }

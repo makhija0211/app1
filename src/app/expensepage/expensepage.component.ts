@@ -18,12 +18,12 @@ export class ExpensepageComponent implements OnInit {
   }
   editFieldValue(index){
       this.newAttribute = {};
-      this.fieldArray.push(this.newAttribute)
+     
   }
   deleteFieldValue(index) {
       this.fieldArray.splice(index, 1);
   }
-
+  
   selectedFile:File = null ;
   
   onFileSelected(event){
