@@ -1,12 +1,16 @@
-<div class="container">
-    <h2>Sign form</h2>
-    <app-form01></app-form01>
-  <!--<h2>Reactive form</h2>
-    <app-form02></app-form02>-->
-  <!--<h2>Expenses dynamic table</h2>
-  <app-expensepage></app-expensepage>-->
-  <app-grocery></app-grocery>
+<div id="header">
+  <app-header></app-header>
 </div>
-<input type="file" (change)="onFileSelected($event)">
-<button type="button" (click)="onUpload">Upload</button>
-<h2>change check</h2>
+<div class="container" id="loginform">
+  <div class="row">
+      <a routerLink="/home"></a>
+    
+  </div>
+</div>
+<div class="container">
+    <div class="row">
+      <a routerLink="/profiles"></a>
+
+    </div>
+</div>
+<router-outlet></router-outlet>

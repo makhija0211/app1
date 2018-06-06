@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class GroceryComponent {
     task = {
       name: '',
-      price: 0,
+      price:0,
       id: 0
     };
     tasks = [];

@@ -1,25 +1,25 @@
 <table class="table table-striped table-bordered">
     <thead>
         <tr>
-            <th>Sno.</th>
-            <th>Name</th>
+            
+            <th>Expense Name</th>
             <th>Price</th>
-            <th>Action</th>
+         
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let field of fieldArray; let i = index">
+            
             <td>
-                <input [(ngModel)]="field.code" class="form-control" type="text" name="{{field.code}}" required/>
-            </td>
-            <td>
-                <input [(ngModel)]="field.name" class="form-control" type="text" name="{{field.name}}" required/>
+                    
+                <input [(ngModel)]="field.name" class="form-control" type="text" name="{{field.name}}" required />
             </td>
             <td>
                 <input [(ngModel)]="field.price" class="form-control" type="text" name="{{field.price}}" required/>
             </td>
             <td>
                 <button class="btn btn-default"  type="button" (click)="deleteFieldValue(i)">Delete</button>
+                <button class="btn btn-default"  type="button" (click)="editFieldValue(i)">Edit</button>
             </td>
         </tr>
         <tr>
@@ -36,5 +36,7 @@
                 <button class="btn btn-default" type="button" (click)="addFieldValue()">Add</button>
             </td>
         </tr>
+        <input type="file" (change)="onFileSelected($event)">
+        <button type="btn btn-submit" (click)="onUpload">Upload</button>
     </tbody>
 </table>
