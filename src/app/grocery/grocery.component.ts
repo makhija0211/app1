@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Http} from '@angular/http';
 @Component({
   selector: 'app-grocery',
   templateUrl: './grocery.component.html',
@@ -9,10 +9,10 @@ export class GroceryComponent {
     task = {
       name: '',
       price:0,
-      id: 0
+      id:0
     };
     tasks = [];
-
+    
     onClick(){
       if(this.task.id == 0){
         this.tasks.push({id: (new Date()).getMonth(),name: this.task.name, strike: false});
@@ -22,7 +22,7 @@ export class GroceryComponent {
       this.task = {
         name: '',
         price: 0,
-        id: 0
+        id:0
       };
     }
     
