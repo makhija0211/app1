@@ -1,10 +1,11 @@
 export const environment = {
-
-  production: true,
-  apiKey: "AIzaSyBPSLMu-5j2bftkNzttPSaZH5H9TVs9PQ0",
-  authDomain: "imageuploadtest-cfa8e.firebaseapp.com",
-  databaseURL: "https://imageuploadtest-cfa8e.firebaseio.com",
-  projectId:"imageuploadtest-cfa8e",
+ production: true,
+ firebase : {
+  apiKey: "AIzaSyAAdZZCusOE9GXZ2691Zgepl9L-kbq5GSg",
+  authDomain: "test-aacfa.firebaseapp.com",
+  databaseURL: "https://test-aacfa.firebaseio.com",
+  projectId: "test-aacfa",
   storageBucket: "",
-  messagingSenderId: "804421430921"
+  messagingSenderId: "170748817190"
+}
 };

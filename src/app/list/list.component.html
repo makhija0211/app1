@@ -1,0 +1,8 @@
+<ul>
+  <div *ngFor="let exp of expenseObservable | async">
+    <ngb-alert type="info" [dismissable]="false">
+      <h3>{{exp.name}} {{exp.value}}</h3>
+    </ngb-alert>
+    </ngb-alert>
+  </div>
+</ul>
